@@ -1,0 +1,37 @@
+body {
+    background: rgb(80, 80, 241);
+    font: normal 13pt arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.432) 5px 5px 10px;
+}
+
+div {
+    text-align: center;
+    padding: 10px;
+}
+
+div#analyzerResult {
+    text-align: center;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+select {
+    width: 145px;
+}

@@ -6,15 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <header>
-        <ul>
-            <li>Início</li>
-            <li>Aplicações</li>
-        </ul>
-    </header>
+    <div>
+        <header>
+            <h1>Analisador de números</h1>
+        </header>
+        <section>
+            <div>
+                <p>
+                    Número entre 1 e 100:
+                    <input type="number" name="analyzerNumber" id="analyzerNumber" />
+                    <input type="button" value="Adicionar" onclick="add()" />
+                </p>
+            </div>
+            <div id="seletor">
+                <select size="10" id="select" name="select"></select>
+                <br />
+                <input type="button" id="finishAnalyzer" value="Finalizar" onclick="finishAnalyzer()" />
+            </div>
+            <div id="analyzerResult"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; VitoriaCaminha</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
