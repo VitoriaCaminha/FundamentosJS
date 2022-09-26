@@ -11,9 +11,7 @@
 
 <body onload="load()">
     <div>
-        <header>
-            <h1>Analisador de números</h1>
-        </header>
+        <h2>Analisador de números</h2>
         <section>
             <div>
                 <p>
@@ -32,9 +30,7 @@
     </div>
 
     <div>
-        <header>
-            <h1>Vamos contar</h1>
-        </header>
+        <h2>Vamos contar</h2>
         <section>
             <div id="dados">
                 <p>Início: <input type="number" name="initial" id="initialNumber" /></p>
@@ -47,13 +43,28 @@
     </div>
 
     <div>
-        <header>
-            <h1>Hora Do Dia</h1>
-        </header>
+        <h2>Hora Do Dia</h2>
         <section>
             <div id="message">Aqui vai aparecer as horas</div>
             <div id="photo">
                 <img id="image" src="./images/fotomanha.png" alt="Foto do dia" />
+            </div>
+        </section>
+    </div>
+
+    <div>
+        <h2>Tabuada</h2>
+        <section>
+            <div>
+                <p>
+                    Número: <input type="number" name="number" id="tableNumber" />
+                    <input type="button" value="Gerar Tabuada" onclick="table()" />
+                </p>
+            </div>
+            <div>
+                <select name="tab" id="table" size="10">
+                    <option>Digite um número acima</option>
+                </select>
             </div>
         </section>
     </div>

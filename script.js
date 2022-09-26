@@ -111,3 +111,24 @@ function load() {
         document.body.style.background = "#3c4964";
     }
 }
+
+
+
+function table() {
+    var table = document.getElementById("table");
+    var tableNumber = document.getElementById("tableNumber");
+    if (tableNumber.value.length == 0) {
+      window.alert("Digite um número!");
+    } else {
+      let n = Number(tableNumber.value);
+      let c = 1;
+      table.innerHTML = "";
+      while (c <= 10) {
+        let item = document.createElement("option");
+        item.text = `${n} x ${c} = ${n * c}`;
+        item.value = `tab${c}`;
+        table.appendChild(item);
+        c++;
+      }
+    }
+  }

@@ -1,9 +1,8 @@
 body {
-    background: rgb(80, 80, 241);
     font: normal 13pt arial;
 }
 
-header {
+h2 {
     color: white;
     text-align: center;
 }
