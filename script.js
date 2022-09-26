@@ -58,3 +58,41 @@ function finishAnalyzer() {
         result.innerHTML += `<p>A média dos números é: ${media}</p>`;
     }
 }
+
+
+
+
+function count() {
+    let initialNumber = document.getElementById("initialNumber");
+    let lastNumber = document.getElementById("lastNumber");
+    let step = document.getElementById("step");
+    let counterResult = document.getElementById("counterResult");
+
+    if (
+        initialNumber.value.length == 0 ||
+        lastNumber.value.length == 0 ||
+        step.value.length == 0
+    ) {
+        window.alert("[ERRO] Faltam dados");
+    } else {
+        counterResult.innerHTML = "contando: <br>";
+        let i = Number(initialNumber.value);
+        let f = Number(lastNumber.value);
+        let p = Number(step.value);
+        if (p <= 0) {
+            window.alert("Passo inválido! Considerando step = 1");
+            p = 1;
+        }
+        if (i < f) {
+            for (let c = i; c < f; c += p) {
+                counterResult.innerHTML += ` ${c} \u{1F449}`;
+            }
+            counterResult.innerHTML += `\u{1F3c1}`;
+        } else {
+            for (let c = i; c >= f; c -= p) {
+                counterResult.innerHTML += ` ${c} \u{1F449}`;
+            }
+            counterResult.innerHTML += `\u{1F3c1}`;
+        }
+    }
+}
