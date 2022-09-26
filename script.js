@@ -59,9 +59,6 @@ function finishAnalyzer() {
     }
 }
 
-
-
-
 function count() {
     let initialNumber = document.getElementById("initialNumber");
     let lastNumber = document.getElementById("lastNumber");
@@ -94,5 +91,23 @@ function count() {
             }
             counterResult.innerHTML += `\u{1F3c1}`;
         }
+    }
+}
+
+function load() {
+    var message = window.document.getElementById("message");
+    var image = window.document.getElementById("image");
+    var data = new Date();
+    var hora = data.getHours();
+    message.innerHTML = `Agora são ${hora} horas.`;
+    if (hora >= 0 && hora < 12) {
+        image.src = "./images/fotomanha.png";
+        document.body.style.background = "#fdbe49";
+    } else if (hora >= 12 && hora < 18) {
+        image.src = "./images/fototarde.png";
+        document.body.style.background = "#6d84a3";
+    } else {
+        image.src = "./images/fotonoite.png";
+        document.body.style.background = "#3c4964";
     }
 }

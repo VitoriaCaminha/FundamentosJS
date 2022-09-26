@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body onload="load()">
     <div>
         <header>
             <h1>Analisador de números</h1>
@@ -43,6 +43,18 @@
                 <input type="button" name="count" value="Contar" onclick="count()" />
             </div>
             <div id="counterResult">Preparando a contagem...</div>
+        </section>
+    </div>
+
+    <div>
+        <header>
+            <h1>Hora Do Dia</h1>
+        </header>
+        <section>
+            <div id="message">Aqui vai aparecer as horas</div>
+            <div id="photo">
+                <img id="image" src="./images/fotomanha.png" alt="Foto do dia" />
+            </div>
         </section>
     </div>
 
