@@ -112,23 +112,66 @@ function load() {
     }
 }
 
-
-
 function table() {
     var table = document.getElementById("table");
     var tableNumber = document.getElementById("tableNumber");
     if (tableNumber.value.length == 0) {
-      window.alert("Digite um número!");
+        window.alert("Digite um número!");
     } else {
-      let n = Number(tableNumber.value);
-      let c = 1;
-      table.innerHTML = "";
-      while (c <= 10) {
-        let item = document.createElement("option");
-        item.text = `${n} x ${c} = ${n * c}`;
-        item.value = `tab${c}`;
-        table.appendChild(item);
-        c++;
-      }
+        let n = Number(tableNumber.value);
+        let c = 1;
+        table.innerHTML = "";
+        while (c <= 10) {
+            let item = document.createElement("option");
+            item.text = `${n} x ${c} = ${n * c}`;
+            item.value = `tab${c}`;
+            table.appendChild(item);
+            c++;
+        }
     }
-  }
+}
+
+
+
+
+function verify() {
+    var data = new Date();
+    var currentYear = data.getFullYear();
+    var verifyYear = document.getElementById("verifyYear");
+    var verifyResult = document.querySelector("div#verifyResult");
+    if (verifyYear.value.lenght == 0 || verifyYear.value > currentYear) {
+        window.alert("[ERRO] Verifique os dados novamente!");
+    } else {
+        var fsex = document.getElementsByName("radsex");
+        var idade = currentYear - Number(verifyYear.value);
+        var gênero = "";
+        var img = document.createElement("img");
+        img.setAttribute("id", "foto");
+        if (fsex[0].checked) {
+            gênero = "Homem";
+            if (idade >= 0 && idade < 13) {
+                img.setAttribute("src", "./images/fotocriancah.png");
+            } else if (idade >= 13 && idade < 22) {
+                img.setAttribute("src", "./images/fotojovemh.png");
+            } else if (idade >= 22 && idade < 50) {
+                img.setAttribute("src", "./images/fotoadultoh.png");
+            } else {
+                img.setAttribute("src", "./images/fotoidosoh.png");
+            }
+        } else if (fsex[1].checked) {
+            gênero = "Mulher";
+            if (idade >= 0 && idade < 13) {
+                img.setAttribute("src", "./images/fotocriancam.png");
+            } else if (idade >= 13 && idade < 22) {
+                img.setAttribute("src", "./images/fotojovemm.png");
+            } else if (idade >= 22 && idade < 50) {
+                img.setAttribute("src", "./images/fotoadultom.png");
+            } else {
+                img.setAttribute("src", "./images/fotoidosom.png");
+            }
+        }
+        verifyResult.style.textAlign = "center";
+        verifyResult.innerHTML = `Detectamos: ${gênero} com ${idade} anos`;
+        verifyResult.appendChild(img);
+    }
+}
